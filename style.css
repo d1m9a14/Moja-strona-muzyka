@@ -1,0 +1,424 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.6rem;
+}
+
+.subpages-bg {
+    background-color: #2f4353;
+    background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%);   
+}
+.underline {
+    border-top: 3px solid black;
+    width: 40%;
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    opacity: .3;
+}
+
+/* -------------------------------------------nav----------------------------------------- */
+nav {
+    min-height: 100px;
+}
+
+/*  nav-hero */
+nav .nav-box {
+    z-index: 5;
+}
+.nav-hero {
+    position: relative;
+    background-image:url(/img/nav-hero-1920.jpg);
+    background-position: 50% 5%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 10;
+}
+.nav-shadow {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: -5;
+}
+/* navbar-brand  (logo)*/
+nav .navbar-brand p {
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 8px;
+}
+nav .navbar-brand:hover {
+    animation: navbar-brand-color .5s forwards;
+}
+@keyframes navbar-brand-color {
+    0% {
+    }
+    100% {
+        color: rgba(216, 113, 17 );
+    }
+}
+/* nav hamburger */
+nav .fa-align-right {
+    font-size: 2.6rem;
+    padding: 10px;
+    color: white;
+}
+/* navbar nav (nav links) */
+nav .navbar-nav {
+    font-size: 2.2rem;
+    margin-left: auto;
+    text-transform: uppercase;
+}
+nav .navbar-nav a {
+    position: relative;
+}
+nav .navbar-nav a, nav .navbar-nav a::before, .navbar-nav a::after {
+    transition: width .3s;
+}
+
+nav .navbar-nav a::before , nav .navbar-nav a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    border-bottom: 2px solid rgba(216, 113, 17 ) ;
+    
+}
+.navbar-nav a::before {
+    left: 50%;
+}
+.navbar-nav a::after {
+    right: 50%;
+}
+nav .navbar-nav a:hover::before , nav .navbar-nav a:hover::after {
+    width: 50%;
+
+}
+
+nav .nav-link {
+    margin-left: auto;
+}
+/* -------------------------------------------header----------------------------------------- */
+/* header hero */
+.header-main-box {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    z-index: 0;
+}
+.header-hero {
+    position: relative;
+    background-image: url('/img/header-hero-1920.jpg');
+    background-position: 20% 30%;
+    z-index: 0;
+}
+.header-shadow {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: -1;
+}
+/* header boxy */
+.header-box , .header-box-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-box {
+    height: 25%;
+}
+.header-box-2 {
+    height: 75%;
+}
+.header-text {
+    text-align: center;
+    color: white;
+    font-style: italic;
+    z-index: 5;
+}
+.header-text h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.header-text p, i {
+    font-size: 2.2rem;
+}
+.header-line {
+    border-bottom: 1px solid rgba(165, 158, 152, 0.2);
+}
+.header-btn {
+    font-size: 2.2rem;
+    color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    background:rgb(46, 44, 44); 
+    border: 3px solid rgb(46, 44, 44); 
+    border-radius: 10%;
+    transition: color .3s; 
+    /* opacity: .8;  */
+}
+.header-btn:hover {
+    color: rgba(216, 113, 17, .8);
+}
+
+.fa-compact-disc {
+   font-size: 20rem;
+   color: gray;
+   transition: color .3s;
+}
+.fa-compact-disc:hover {
+    color: rgba(216, 113, 17, .8);;
+}
+/* cards header-box-2  */
+
+
+/* --------------------------------------------------subpages--------------------------------------------------- */
+.subpages-description {
+    font-style: italic;
+    text-align: center;
+}
+.subpages-description h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+.subpages-description p {
+    font-size: 2.2rem;
+}
+.subpages-description-text-left {
+    text-align: left;
+}
+.fa-circle-play {
+    font-size: 20rem;
+    color: black;
+    transition: color .3s;
+ }
+ .fa-circle-play:hover {
+     color: rgba(216, 113, 17, .8);;
+ }
+
+.playlists-cards .card {
+    height: 500px;
+    border-radius: 10%;
+    color: white;
+    border: none;
+    transition: color transform .3s;
+}
+
+.playlists-cards .card:hover {
+    color: rgba(216, 113, 17);
+    transform: scale(1.1);
+}
+.playlists-card-line {
+    position: relative;
+    border-top: 3px solid rgba(252, 249, 249, 0.8);
+    padding-top: 10px;
+}
+
+.playlists-cards img {
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    height: 300px;
+    background-size: cover;
+}
+
+.playlists-cards a ,.subpages-cards a:after  {
+    text-decoration: none;
+    color: white;
+    overflow: hidden;
+}
+.playlists-cards h5 {
+    text-transform: uppercase;
+}
+
+/* aboutme */
+.aboutme-hobby i {
+    font-size: 4rem;
+    cursor: crosshair;
+}
+.aboutme-hobby, .contact-icons h3 {
+    text-transform: uppercase;
+}
+.contact-icons a {
+    color: black;
+}
+
+.contact-icons i {
+    font-size: 4rem;
+    transition: color transform .3s; 
+}
+.contact-icons i:hover {
+    color: rgba(216, 113, 17); 
+}
+
+
+
+
+/* -------------------------------------------footer----------------------------------------- */
+.footer-border-top {
+    border-top: 3px solid rgba(216, 113, 17, .5);
+}
+.footer {
+    display: flex;
+    min-height: 200px;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.footer p {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+}
+.footer-icons i {
+    font-size: 3rem;
+    cursor: pointer;
+}
+.footer-icons i:hover {
+    color: rgba(216, 113, 17, .8);
+}
+.footer-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 25%;
+    background-image: url(/img/footer-logo.jpg);
+    background-size: cover;
+    opacity: .5;
+}
+.footer-c-ch {
+    cursor: crosshair;
+}
+.footer-hero {
+    position: relative;
+    height: 200px;
+    background-image: url(/img/footer-hero-1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+.footer-shadow {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: -1;
+}
+
+@media (min-width: 992px) {
+    .underline {
+        width: 30%;
+    }
+}
+@media (max-width: 768px) {
+    .header-text h2 {
+        font-size: 2.6rem;
+    }
+    .header-text p, i {
+        font-size: 2rem;
+    }
+    .header-btn {
+        font-size: 1.6rem;
+    }
+    .fa-compact-disc {
+        font-size: 15rem;
+     }
+    .subpages-description h2 {
+        font-size: 2.6rem;
+    }
+    .subpages-description p {
+        font-size: 2rem;
+    }
+    .fa-circle-play {
+        font-size: 15rem;
+    }
+    .aboutme-hobby, .contact-icons i {
+        font-size: 3.5rem;
+    }
+}
+@media (max-width: 540px) {
+    .nav-hero {
+        background-image:url(/img/nav-hero-640.jpg);
+    }
+    nav .navbar-brand p , nav .fa-align-right {
+        font-size: 2rem;
+    }
+    .navbar-nav {
+        font-size: 1.4rem;
+    }
+    .header-hero {
+        background-image: url('/img/header-hero-640.jpg');
+    }
+    .header-text h2 {
+        font-size: 2.4rem;
+    }
+    .header-text p, i {
+        font-size: 1.8rem;
+    }
+    .header-btn {
+        font-size: 1.2rem;
+    }
+    .fa-compact-disc {
+        font-size: 10rem;
+    }
+    .subpages-description h2 {
+        font-size: 2.4rem;
+    }
+    .subpages-description p {
+        font-size: 1.8rem;
+    }
+    .fa-circle-play {
+        font-size: 10rem;
+     }
+    .footer {
+        flex-direction: column;
+    }
+    .footer-logo {
+        width: 75px;
+        height: 75px;
+        margin-top: 10px;
+    }
+    .footer-hero {
+        background-image: url(/img/footer-hero-640.jpg);    
+    }
+    .footer p {
+        font-size: 1.5rem;
+    }
+
+    .footer-icons i {
+        font-size: 1.8rem;
+    }
+    .aboutme-hobby, .contact-icons i {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .underline {
+        border: none;
+    }
+}
+@media (max-width: 290px) {
+    nav .navbar-brand p  {
+        display: none;
+    }
+} 
+
+
+
